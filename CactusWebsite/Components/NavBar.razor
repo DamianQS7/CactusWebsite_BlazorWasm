@@ -1,4 +1,4 @@
-﻿<nav class="nav container">
+﻿<nav class="nav container @blurClass">
     <a href="#" class="nav-logo">
         <i class="ri-cactus-line"></i> Cactus
     </a>
@@ -37,11 +37,3 @@
         </div>
     </div>
 </nav>
-
-@code {
-    private bool isMenuVisible = false;
-    private string menuStyle => isMenuVisible ? "right: 0" : "right: -100%";
-    private void ToggleMenu() => isMenuVisible = !isMenuVisible;
-    private void CloseMenu() => isMenuVisible = false;
-
-}
