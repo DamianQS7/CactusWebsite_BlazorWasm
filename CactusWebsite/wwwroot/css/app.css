@@ -1,0 +1,339 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+/*=============== CSS VARIABLES ===============*/
+
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+
+  --primary-color: hsl(93, 54%, 54%);
+  --secondary-color: hsl(93, 50%, 48%);
+  --tertiary-color: hsl(93, 58%, 66%);
+  --title-color: hsl(228, 8%, 98%);
+  --text-color: hsl(228, 8%, 70%);
+  --white-color: hsl(228, 8%, 98%);
+  --black-color: hsl(228, 6%, 4%);
+  --body-color: hsl(228, 6%, 8%);
+  --container-color: hsl(228, 6%, 12%);
+  --shadow-img: 0 0 48px hsla(93, 54%, 54%, .4);
+  --gradient-card: linear-gradient(180deg,
+                                hsla(93, 8%, 8%),
+                                hsla(93, 40%, 30%));
+
+  /*========== Font and typography ==========*/
+
+  --body-font: "Montserrat", sans-serif;
+  --fs-big: 2.25rem;
+  --fs-normal: .938rem;
+  --fs-small: .813rem;
+  --fs-h1: 1.5rem;
+  --fs-h2: 1.25rem;
+  --fs-h3: 1rem;
+  
+  /*========== Font weight ==========*/
+
+  --font-regular: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --fs-big: 4.25rem;
+    --fs-normal: 1rem;
+    --fs-small: .875rem;
+    --fs-h1: 2.25rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.25rem;
+  }
+}
+
+/*=============== CSS RESET ===============*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--fs-normal);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semibold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== UTILITY CLASSES ===============*/
+
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section-title {
+  font-size: var(--fs-h1);
+  font-weight: var(--font-bold);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*=============== WEBSITE SECTIONS ===============*/
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+}
+
+/* Shop Section */
+
+.shop-container {
+  padding-top: 6.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem 1.5rem;
+}
+
+.card-title {
+  font-size: var(--fs-small);
+  font-weight: var(--font-semibold);
+  margin-bottom: .5rem;
+}
+
+.shop-cards {
+  position: relative;
+  background: var(--gradient-card);
+  padding: 5.75rem .75rem 1.25rem .75rem;
+  border: 2px solid var(--tertiary-color);
+  border-radius: 1rem;
+}
+
+.shop-cards img {
+  position: absolute;
+  top: -4.5rem;
+  left: 0;
+  right: 0;
+  width: 130px;
+  margin: 0 auto;
+  transition: transform .4s;
+}
+
+.shop-cards span {
+  font-weight: var(--font-semibold);
+  color: var(--title-color);
+}
+
+.shop-cards button {
+  position: absolute;
+  right: .75rem;
+  bottom: .75rem;
+  outline: none;
+  border: none;
+  background-color: var(--white-color);
+  padding: 6px;
+  border-radius: 50%;
+  font-size: var(--fs-h2);
+  display: grid;
+  cursor: pointer;
+}
+
+.shop-cards:hover img {
+  transform: translateY(-.5rem);
+}
+
+/*Care Section*/
+.care-container {
+    padding-top: 2rem;
+    row-gap: 2rem;
+}
+
+.care-container img {
+  width: 270px;
+  filter: drop-shadow(var(--shadow-img));
+  justify-self: center;
+}
+
+.care-container ul {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.care-container ul li {
+  display: flex;
+  column-gap: .5rem;
+  align-items: flex-start;
+}
+
+.care-container ul li i {
+  font-size: var(--fs-h1);
+  color: var(--primary-color);
+}
+
+/* Contact */
+.contact-container {
+  padding-top: 2rem;
+  row-gap: 2rem;
+}
+
+.contact-container img {
+  width: 270px;
+  filter: drop-shadow(var(--shadow-img));
+  justify-self: center;
+}
+
+.contact-content {
+  display: grid;
+  row-gap: 2rem;
+  text-align: center;
+}
+
+.contact-container h3 {
+  font-size: var(--fs-h2);
+  margin-bottom: .75rem;
+}
+
+.contact-social {
+  display: flex;
+  justify-content: center;
+  column-gap: .75rem;
+}
+ 
+.contact-social a {
+  color: var(--primary-color);
+  font-size: var(--fs-h1);
+}
+
+.contact-content address {
+  font-style: normal;
+}
+
+
+/* FOOTER */
+footer {
+  padding-block: 4rem 2rem;
+}
+
+.footer-container {
+  row-gap: 4rem;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  color: var(--title-color);
+  font-size: var(--fs-h2);
+  font-weight: var(--font-semibold);
+  margin-bottom: .75rem;
+}
+
+.footer-logo i {
+  color: var(--primary-color);
+  font-size: var(--fs-h1);
+  font-weight: initial;
+}
+
+.footer-content {
+  grid-template-columns: repeat(2, max-content);
+  gap: 4rem 3rem;
+}
+
+.footer-title {
+  font-size: var(--fs-normal);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: grid;
+  row-gap: .75rem;
+}
+
+.footer-link {
+  color: var(--text-color);
+  transition: color .4s;
+}
+
+.footer-social {
+  display: flex;
+  column-gap: .75rem;
+}
+
+.footer-social-link {
+  color: var(--text-color);
+  font-size: var(--fs-h1);
+  transition: color .4s;
+}
+
+.footer-link:hover,
+.footer-social-link:hover {
+  color: var(--primary-color);
+}
+
+.footer-copyright {
+  display: block;
+  margin-top: 6rem;
+  text-align: center;
+  font-size: var(--fs-small);
+}
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up */
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */

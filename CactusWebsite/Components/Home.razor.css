@@ -1,0 +1,71 @@
+.home-container {
+    padding-top: 2.5rem;
+    row-gap: 2rem;
+}
+
+.home-container img {
+    width: 270px;
+    filter: drop-shadow(var(--shadow-img));
+    justify-self: center;
+}
+
+.home-data {
+    text-align: center;
+}
+
+.home-data h1 {
+    font-size: var(--fs-big);
+    font-weight: var(--font-bold);
+    margin-bottom: 1rem;
+}
+
+.home-data h1 span {
+    color: var(--primary-color);
+}
+
+.home-data p {
+    margin-bottom: 3rem;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.button {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-weight: var(--font-bold);
+    padding: .5rem 1.5rem .5rem .5rem;
+    border-radius: 4rem;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .75rem;
+}
+
+.button span {
+    background-color: var(--primary-color);
+    padding: .5rem;
+    font-size: var(--fs-h2);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: transform .4s;
+}
+
+.button:hover span {
+    transform: translateX(.15rem) rotate(-30deg);
+}
+
+.button-link {
+    color: var(--white-color);
+    font-weight: var(--font-bold);
+    text-decoration: underline;
+    transition: color .4s;
+}
+
+.button-link:hover {
+    color: var(--primary-color)
+}

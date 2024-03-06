@@ -1,0 +1,91 @@
+.nav {
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo,
+.nav-close,
+.nav-toggle,
+.nav-actions {
+    display: flex;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+.nav-logo {
+    font-weight: var(--font-semibold);
+    column-gap: .25rem;
+    align-items: center;
+}
+
+.nav-logo i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: initial;
+}
+
+.nav-actions {
+    font-size: var(--fs-h2);
+    column-gap: .5rem;
+    align-items: center;
+}
+
+/* Navigation in Movbile Devices */
+@media screen and (max-width: 1150px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: hsla(228, 24%, 66%, .2);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        width: 80%;
+        height: 100%;
+        padding: 6rem 3rem 0;
+        transition: right .4s;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+}
+
+.nav-close {
+    position: absolute;
+    top: 1.15rem;
+    right: 1.5rem;
+    font-size: var(--fs-h2);
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-menu a {
+    color: var(--title-color);
+    font-weight: var(--font-semibold);
+    transition: color .4s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.blur-header::after {
+    content: '';
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    background-color: hsla(228, 24%, 6%, .2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

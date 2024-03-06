@@ -1,0 +1,51 @@
+.new-data {
+    text-align: center;
+}
+
+.new-container {
+    row-gap: 7.5rem;
+}
+
+.new-content {
+    row-gap: 6rem;
+}
+
+.new-card {
+    position: relative;
+    width: 200px;
+    background: var(--gradient-card);
+    padding: 9rem .75rem 1.5rem .75rem;
+    border: 2px solid var(--tertiary-color);
+    border-radius: 1.5rem;
+}
+
+.new-card img {
+    position: absolute;
+    top: -4.5rem;
+    left: 0;
+    right: 0;
+    width: 180px;
+    margin: 0 auto;
+    transition: transform .4s;
+}
+
+.new-card:hover img {
+    transform: translateY(-.5rem);
+}
+
+.new-card h2 {
+    font-size: var(--fs-h2);
+    text-align: center;
+}
+
+.new-card:nth-child(odd) {
+    rotate: -5deg;
+}
+
+.new-card:nth-child(even) {
+    rotate: 5deg;
+    justify-self: flex-end;
+}
+
+
+
