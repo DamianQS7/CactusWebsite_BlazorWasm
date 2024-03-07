@@ -1,0 +1,17 @@
+﻿<article class="shop-cards">
+    <img src="@ImagePath" alt="@ImageAlt"/>
+
+    <h3>@((MarkupString)CardTitle)</h3>
+    <span class="shop-price">@CardPrice</span>
+
+    <button class="shop-button">
+        <i class="ri-shopping-bag-line"></i>
+    </button>
+</article>
+
+@code {
+    [Parameter] public string ImagePath { get; set; } = string.Empty;
+    [Parameter] public string ImageAlt { get; set; } = "Image";
+    [Parameter] public string CardTitle { get; set; } = string.Empty;
+    [Parameter] public string CardPrice { get; set; } = string.Empty;
+}

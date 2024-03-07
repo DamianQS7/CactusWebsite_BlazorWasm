@@ -34,7 +34,7 @@ public partial class NavBar
     {
         if (module is not null)
         {
-            scrollY = await module.InvokeAsync<double>("getScrollYPosition");
+            scrollY = await Javascript.InvokeAsync<double>("jsFunctions.getScrollYPosition");
             blurClass = scrollY >= 50 ? "blur-header" : "";
             StateHasChanged();
         }

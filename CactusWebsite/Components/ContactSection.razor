@@ -1,0 +1,47 @@
+﻿<h2 class="section-title">
+    YOU WANT A CACTUS <br> CONTACT US
+</h2>
+
+<div class="contact-container container grid">
+    <img src="images/contact-cactus.png" alt="Contact Image">
+
+    <div class="contact-content">
+        <div>
+            <h3>Write to us</h3>
+
+            <div class="contact-social">
+                @foreach (var link in socialMediaLinks)
+                {
+                    <a href="@link.Item1" target="_blank">
+                        <i class="@link.Item2"></i>
+                    </a>
+                }
+            </div>
+        </div>
+
+        @foreach (var contact in contactInfo)
+         {
+            <div>
+                <h3>@contact.Item1</h3>
+
+                <address>@((MarkupString)contact.Item2) </address>
+            </div>
+         }
+    </div>
+</div>
+
+@code {
+    private List<(string, string)> socialMediaLinks = new List<(string, string)>
+    {
+        ("#", "ri-whatsapp-fill"),
+        ("#", "ri-messenger-fill"),
+        ("#", "ri-mail-fill")
+    };
+
+    private List<(string, string)> contactInfo = new List<(string, string)>
+    {
+        ("Call us at the numbers", "+1 (543)-453-4457 <br> +1 (547)-457-7562"),
+        ("Find us here", "Waterloo, ON <br> 457 Victoria St.")
+    };
+}
+

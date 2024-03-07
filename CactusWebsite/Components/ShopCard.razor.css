@@ -1,0 +1,46 @@
+﻿.card-title {
+    font-size: var(--fs-small);
+    font-weight: var(--font-semibold);
+    margin-bottom: .5rem;
+}
+
+.shop-cards {
+    position: relative;
+    background: var(--gradient-card);
+    padding: 5.75rem .75rem 1.25rem .75rem;
+    border: 2px solid var(--tertiary-color);
+    border-radius: 1rem;
+}
+
+.shop-cards img {
+    position: absolute;
+    top: -4.5rem;
+    left: 0;
+    right: 0;
+    width: 130px;
+    margin: 0 auto;
+    transition: transform .4s;
+}
+
+.shop-cards span {
+    font-weight: var(--font-semibold);
+    color: var(--title-color);
+}
+
+.shop-cards button {
+    position: absolute;
+    right: .75rem;
+    bottom: .75rem;
+    outline: none;
+    border: none;
+    background-color: var(--white-color);
+    padding: 6px;
+    border-radius: 50%;
+    font-size: var(--fs-h2);
+    display: grid;
+    cursor: pointer;
+}
+
+.shop-cards:hover img {
+    transform: translateY(-.5rem);
+}

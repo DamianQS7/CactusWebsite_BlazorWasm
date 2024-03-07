@@ -17,159 +17,34 @@
         <h2 class="section-title">THE BEST PLANTS</h2>
 
         <div class="shop-container container grid">
-            <article class="shop-cards">
-                <img src="images/shop-cactus-1.png" alt="Cactus for sale 1">
+            <ShopCard ImagePath="images/shop-cactus-1.png"
+                      ImageAlt="Cactus for sale 1"
+                      CardTitle="Gymnocalycium <br /> Cactus"
+                      CardPrice="$15" />
 
-                <h3 class="card-title">Gymnocalycium <br /> Cactus</h3>
-                <span class="card-price">$15</span>
+            <ShopCard ImagePath="images/shop-cactus-1.png"
+                      ImageAlt="Cactus for sale 1"
+                      CardTitle="Gymnocalycium <br /> Cactus"
+                      CardPrice="$15" />
 
-                <button class="shop-button">
-                    <i class="ri-shopping-bag-line"></i>
-                </button>
-            </article>
+            <ShopCard ImagePath="images/shop-cactus-1.png"
+                      ImageAlt="Cactus for sale 1"
+                      CardTitle="Gymnocalycium <br /> Cactus"
+                      CardPrice="$15" />
 
-            <article class="shop-cards">
-                <img src="images/shop-cactus-2.png" alt="Cactus for sale 2">
-
-                <h3 class="card-title">Echeveria <br /> Succulent</h3>
-                <span class="card-price">$10</span>
-
-                <button class="shop-button">
-                    <i class="ri-shopping-bag-line"></i>
-                </button>
-            </article>
-
-            <article class="shop-cards">
-                <img src="images/shop-cactus-3.png" alt="Cactus for sale 3">
-
-                <h3 class="card-title">Ferocactus Cactus</h3>
-                <span class="card-price">$15</span>
-
-                <button class="shop-button">
-                    <i class="ri-shopping-bag-line"></i>
-                </button>
-            </article>
-
-            <article class="shop-cards">
-                <img src="images/shop-cactus-4.png" alt="Cactus for sale 4">
-
-                <h3 class="card-title">Key Lime Pie <br /> Succulent</h3>
-                <span class="card-price">$10</span>
-
-                <button class="shop-button">
-                    <i class="ri-shopping-bag-line"></i>
-                </button>
-            </article>
-
-            <article class="shop-cards">
-                <img src="images/shop-cactus-5.png" alt="Cactus for sale 5">
-
-                <h3 class="card-title">Melocactus <br /> Cactus</h3>
-                <span class="card-price">$15</span>
-
-                <button class="shop-button">
-                    <i class="ri-shopping-bag-line"></i>
-                </button>
-            </article>
-
+            <ShopCard ImagePath="images/shop-cactus-1.png"
+                      ImageAlt="Cactus for sale 1"
+                      CardTitle="Gymnocalycium <br /> Cactus"
+                      CardPrice="$15" />
         </div>
     </section>
 
     <section class="care section" id="care">
-        <h2 class="section-title">
-            CARE AND HEALTH FOR <br /> YOU CACTUS
-        </h2>
-
-        <div class="care-container container grid">
-            <img src="images/care-cactus.png" alt="Cactus image">
-
-            <ul class="care-list">
-                <li class="care-item">
-                    <i class="ri-checkbox-fill"></i>
-                    <p>
-                        In cold times, add water once a month
-                        and during the summer do it when the soil
-                        is very dry.
-                    </p>
-                </li>
-                <li class="care-item">
-                    <i class="ri-checkbox-fill"></i>
-                    <p>
-                        Have good drainage so that the cactus
-                        does not accumulate water.
-                    </p>
-                </li>
-                <li class="care-item">
-                    <i class="ri-checkbox-fill"></i>
-                    <p>
-                        Place your cactus or succulent in a
-                        location with indirect light.
-                    </p>
-                </li>
-                <li class="care-item">
-                    <i class="ri-checkbox-fill"></i>
-                    <p>
-                        Do not water more than necessary, as it
-                        can accumulate too much water and the
-                        plant will rot.
-                    </p>
-                </li>
-                <li class="care-item">
-                    <i class="ri-checkbox-fill"></i>
-                    <p>
-                        Do not expose to high temperatures, as
-                        succulent plants are not fans of
-                        extremes.
-                    </p>
-                </li>
-            </ul>
-        </div>
+        <CareSection />
     </section>
 
     <section class="contact section" id="contact">
-        <h2 class="section-title">
-            YOU WANT A CACTUS <br> CONTACT US
-        </h2>
-
-        <div class="contact-container container grid">
-            <img src="images/contact-cactus.png" alt="Contact Image">
-
-            <div class="contact-content">
-                <div>
-                    <h3>Write to us</h3>
-
-                    <div class="contact-social">
-                        <a href="#" target="_blank">
-                            <i class="ri-whatsapp-fill"></i>
-                        </a>
-
-                        <a href="#" target="_blank">
-                            <i class="ri-messenger-fill"></i>
-                        </a>
-
-                        <a href="#" target="_blank">
-                            <i class="ri-mail-fill"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h3>Call us at the numbers</h3>
-
-                    <address>
-                        +1 (543)-453-4457 <br>
-                        +1 (547)-457-7562
-                    </address>
-                </div>
-                <div>
-                    <h3>Find us here</h3>
-
-                    <address>
-                        Waterloo, ON <br>
-                        457 Victoria St.
-                    </address>
-                </div>
-            </div>
-        </div>
+        <ContactSection />
     </section>
 </main>
 
@@ -242,8 +117,12 @@
             </div>
         </div>
     </div>
-
+    
     <span class="footer-copyright">
         &#169; All Rights Reserved by Bedimcode
     </span>
 </footer>
+
+<a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+</a>

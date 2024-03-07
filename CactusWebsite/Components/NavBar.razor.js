@@ -1,7 +1,3 @@
-export function getScrollYPosition() {
-    return window.scrollY;
-}
-
 export function addWindowEventListener(dotNetObjRef) {
     
     function blurHeader() {
