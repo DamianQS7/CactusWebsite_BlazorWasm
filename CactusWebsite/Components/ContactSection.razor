@@ -10,11 +10,11 @@
             <h3>Write to us</h3>
 
             <div class="contact-social">
+                
                 @foreach (var link in socialMediaLinks)
                 {
-                    <a href="@link.Item1" target="_blank">
-                        <i class="@link.Item2"></i>
-                    </a>
+                    <SocialLink HRef="@link.Item1"
+                                IconClass="@link.Item2" />
                 }
             </div>
         </div>

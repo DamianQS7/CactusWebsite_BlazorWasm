@@ -1,0 +1,62 @@
+﻿<footer class="footer">
+    <div class="footer-container container grid">
+        <div>
+            <a href="#" class="footer-logo">
+                <i class="ri-cactus-line"></i>Cactus
+            </a>
+
+            <p class="footer-description">
+                Choose the best <br> plants for your home.
+            </p>
+        </div>
+
+        <div class="footer-content grid">
+            @foreach(var kvp in footerContent)
+             {
+                <div>
+                    <h3 class="footer-title">
+                        @kvp.Key
+                    </h3>
+                    <ul class="footer-links">
+                        @foreach(var value in kvp.Value)
+                         {
+                            <li>
+                                <a href="" class="footer-link">@value</a>
+                            </li>
+                         }
+                    </ul>
+                </div>
+             }
+            
+            <div>
+                <h3 class="footer-title">
+                    SOCIAL MEDIA
+                </h3>
+                <div class="footer-social">
+                    <SocialLink HRef="https://www.facebook.com"
+                                LinkClass="footer-social-link"
+                                IconClass="ri-facebook-circle-fill" />
+                    <SocialLink HRef="https://www.instagram.com"
+                                LinkClass="footer-social-link"
+                                IconClass="ri-instagram-fill" />
+                    <SocialLink HRef="https://www.twitter.com"
+                                LinkClass="footer-social-link"
+                                IconClass="ri-twitter-x-line" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span class="footer-copyright">
+        &#169; All Rights Reserved by Bedimcode
+    </span>
+</footer>
+
+@code {
+    Dictionary<string, string[]> footerContent = new Dictionary<string, string[]>
+    {
+        { "COMPANY", new string[] { "About us", "Products", "Features" } },
+        { "INFORMATION", new string[] { "Blogs & News", "Contact us", "FAQs" } }
+    };
+}
+

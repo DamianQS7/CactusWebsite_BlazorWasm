@@ -1,0 +1,9 @@
+﻿<a href="@HRef" class="@LinkClass" target="_blank">
+    <i class="@IconClass"></i>
+</a>
+
+@code {
+    [Parameter] public string HRef { get; set; } = "#";
+    [Parameter] public string LinkClass { get; set; } = "";
+    [Parameter] public string IconClass { get; set; } = "";
+}
